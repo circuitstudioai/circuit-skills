@@ -21,6 +21,13 @@ echo "VITE_SUPABASE_ANON_KEY set? ${VITE_SUPABASE_ANON_KEY:+YES}"
 
 If service credentials are unavailable, stop before pretending staging was validated. Continue with local static checks only.
 
+## Validation Modes
+
+- `local-static`: inspect migrations, policies, docs, and scripts without connecting to Supabase.
+- `staging-read`: run read-only validation against staging.
+- `staging-write`: run idempotency/replay or job tests that write to staging. Use only when the user confirms the target is safe.
+- `production`: do not run mutation tests unless explicitly approved.
+
 ## Local Static Checks
 
 Inspect:
@@ -37,6 +44,16 @@ Useful commands:
 rg -n "create table|alter table|policy|security definer|service_role|rls|storage" supabase
 rg -n "SUPABASE|staging|migration|RLS|validation" docs scripts README.md
 ```
+
+## RLS Checklist
+
+For every new table with user or tenant data:
+
+- RLS is enabled.
+- Insert/select/update/delete policies are explicit.
+- Policies match the app's auth model.
+- Service-role helpers are `security definer` only when needed.
+- Service-role helpers validate ownership or intentionally bypass it for backend-only jobs.
 
 ## Staging Evidence
 
@@ -58,6 +75,16 @@ Evidence should cover:
 - Service-role functions exist and return expected shapes.
 - Idempotency/replay behavior where relevant.
 - Storage buckets or artifact URLs where relevant.
+
+## Destructive SQL Guardrail
+
+Never run SQL that includes these patterns without explicit confirmation of target and rollback:
+
+```bash
+rg -n "drop table|drop schema|truncate|delete from|alter table .* drop" supabase
+```
+
+If destructive SQL is present in a migration, report it before applying.
 
 ## Rules
 

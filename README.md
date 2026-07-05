@@ -11,7 +11,7 @@ Inspired by:
 
 ## Version
 
-Current version: `0.1.0`
+Current version: `0.1.1`
 
 ## Included Skills
 
@@ -34,6 +34,43 @@ A good skill gives an agent:
 - which commands or evidence matter,
 - what must not be weakened,
 - how to report blockers honestly.
+
+## What This Repo Is
+
+This is not an app framework. It is a small set of public, reusable examples for turning repeated agent work into explicit runbooks.
+
+Each skill is intentionally:
+
+- specific enough to be useful,
+- generic enough to adapt,
+- short enough to load into context,
+- detailed enough to prevent common agent failure modes.
+
+## How To Adapt It
+
+1. Copy one skill into your own agent skill directory.
+2. Replace stack assumptions with your team's stack.
+3. Add the checks that actually prove readiness in your repos.
+4. Remove anything that does not match your workflow.
+5. Keep one skill per workflow. Do not turn this into a giant policy document.
+
+Good team-specific additions:
+
+- exact release commands,
+- staging credential names,
+- data-quality thresholds,
+- PR body conventions,
+- handoff sections your team actually uses,
+- known traps that agents keep repeating.
+
+Bad additions:
+
+- secrets,
+- credentials,
+- personal account names,
+- private hostnames,
+- vague reminders the model already knows,
+- broad company policy that should live elsewhere.
 
 ## Operating Principles
 
@@ -84,3 +121,8 @@ cp -R skills/circuit-handoff ~/.codex/skills/
 
 Treat this repo as inspiration, not a universal framework. The best skills are usually specific to the team, stack, and failure modes they are meant to protect.
 
+## Example Share Prompt
+
+```text
+Use the release-gate skill from this repo to verify whether my app is ready to merge. Read the repo instructions first, run the available build/test/lint/security checks, and return a verdict with evidence and blockers.
+```

@@ -1,31 +1,31 @@
 {
   "name": "circuit-skills",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "owner": "Circuit Studio",
   "skills": [
     {
       "name": "circuit-app-kit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "app-platform"
     },
     {
       "name": "circuit-release-gate",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "release"
     },
     {
       "name": "circuit-handoff",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "coordination"
     },
     {
       "name": "supabase-staging-validation",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "staging"
     },
     {
       "name": "github-pr-evidence",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "github"
     }
   ]

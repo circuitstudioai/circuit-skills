@@ -24,6 +24,16 @@ gh pr status
 gh pr view --json number,title,url,state,mergeable,headRefName,baseRefName,statusCheckRollup
 ```
 
+## Before Opening A PR
+
+Check:
+
+- branch name is meaningful,
+- working tree only contains intended files,
+- release gate has been run or blocker is documented,
+- migrations and env vars are called out,
+- docs changed when behavior changed.
+
 ## PR Body Shape
 
 ```markdown
@@ -45,6 +55,13 @@ gh pr view --json number,title,url,state,mergeable,headRefName,baseRefName,statu
 - <missing access/env/checks, or None>
 ```
 
+## Status Check Interpretation
+
+- Passing local checks do not imply preview deploy success.
+- A mergeable PR can still be release-blocked by failed preview, missing staging evidence, or data quality.
+- A failed check with external access missing is a blocker; do not hide it as "known flaky".
+- If CI and local disagree, report both and investigate the environment difference.
+
 ## Evidence Rules
 
 - Include exact commands run.
@@ -53,6 +70,16 @@ gh pr view --json number,title,url,state,mergeable,headRefName,baseRefName,statu
 - Mention missing env vars by name only.
 - Do not claim preview deploy success unless the check actually passed.
 - Do not request merge when release gate verdict is red or blocked.
+
+## Comment / Review Update Template
+
+```markdown
+Update:
+- Changed: <what changed since last review>
+- Evidence: `<command>` - <result>
+- Still blocked: <blocker or None>
+- Reviewer attention: <files/areas to inspect>
+```
 
 ## Reviewer Notes
 

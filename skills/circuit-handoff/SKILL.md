@@ -19,6 +19,19 @@ git log --oneline --max-count=5
 
 Do not restate stable repo instructions already covered by `AGENTS.md`.
 
+## What Belongs In A Handoff
+
+Include things the next agent cannot cheaply recover:
+
+- why a decision was made,
+- what failed already,
+- what is blocked externally,
+- what commands were run,
+- which files matter and why,
+- what is intentionally out of scope.
+
+Skip things the next agent can get from `ls`, `package.json`, or the code itself unless they are surprising.
+
 ## Handoff Template
 
 ```markdown
@@ -51,6 +64,24 @@ Generated: <timestamp>
 ## Next Useful Step
 <One concrete next step, phrased as status/context rather than a command when possible.>
 ```
+
+## Quality Bar
+
+A good handoff lets a fresh agent continue without:
+
+- asking what repo this is,
+- rerunning already-failed approaches,
+- guessing which checks passed,
+- confusing local readiness with staging readiness,
+- exposing secrets or personal data.
+
+## Common Mistakes
+
+- Writing a motivational summary instead of state.
+- Saying "tests pass" without the command.
+- Saying "blocked on env" without naming the env vars.
+- Copying long diffs instead of referencing files.
+- Telling the next agent what to do without preserving why.
 
 ## Rules
 
