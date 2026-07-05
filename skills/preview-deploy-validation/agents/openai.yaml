@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preview Deploy Validation"
+  short_description: "Validate preview deployments."
+  default_prompt: "Use this skill to validate a preview deployment before release."

@@ -11,7 +11,7 @@ Inspired by:
 
 ## Version
 
-Current version: `0.1.1`
+Current version: `0.2.0`
 
 ## Included Skills
 
@@ -22,6 +22,16 @@ Current version: `0.1.1`
 | `circuit-handoff` | Produce state-focused handoffs for long-running or interrupted agent work. |
 | `supabase-staging-validation` | Validate migrations, RLS, service functions, and staging evidence for Supabase-backed apps. |
 | `github-pr-evidence` | Prepare reviewer-ready PR summaries, evidence, risks, and follow-up notes. |
+| `skill-design-guide` | Design useful, portable agent skills. |
+| `goal-prompt-contract` | Write verifiable long-running agent goals. |
+| `ci-failure-triage` | Diagnose failed CI checks and identify the next fix. |
+| `preview-deploy-validation` | Validate preview deployments before release. |
+| `frontend-ux-gate` | Check frontend UX readiness before release. |
+| `database-migration-review` | Review database migrations for safety. |
+| `rls-policy-review` | Review row-level security policies. |
+| `data-quality-gate` | Gate releases on data quality evidence. |
+| `worker-idempotency-validation` | Validate worker retry and idempotency behavior. |
+| `prd-to-scope` | Convert PRDs or ideas into scoped release slices. |
 
 ## Why Skills?
 
@@ -37,7 +47,7 @@ A good skill gives an agent:
 
 ## What This Repo Is
 
-This is not an app framework. It is a small set of public, reusable examples for turning repeated agent work into explicit runbooks.
+This is not an app framework. It is a public, reusable example library for turning repeated agent work into explicit runbooks.
 
 Each skill is intentionally:
 

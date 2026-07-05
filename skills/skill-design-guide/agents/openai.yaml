@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Design Guide"
+  short_description: "Design effective agent skills."
+  default_prompt: "Use this skill to design or improve an agent skill."

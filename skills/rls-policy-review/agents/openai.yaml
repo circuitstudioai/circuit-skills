@@ -1,0 +1,4 @@
+interface:
+  display_name: "RLS Policy Review"
+  short_description: "Review row-level security."
+  default_prompt: "Use this skill to review row-level security policies."

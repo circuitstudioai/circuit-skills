@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD To Scope"
+  short_description: "Convert PRDs to release scope."
+  default_prompt: "Use this skill to turn a PRD or product idea into a scoped release slice."

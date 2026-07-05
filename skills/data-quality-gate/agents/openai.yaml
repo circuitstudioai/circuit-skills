@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Quality Gate"
+  short_description: "Gate releases on data quality."
+  default_prompt: "Use this skill to validate data quality before release."

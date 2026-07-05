@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend UX Gate"
+  short_description: "Check frontend UX readiness."
+  default_prompt: "Use this skill to check frontend UX readiness before release."

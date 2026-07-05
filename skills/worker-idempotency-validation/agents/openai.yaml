@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worker Idempotency Validation"
+  short_description: "Validate worker idempotency."
+  default_prompt: "Use this skill to validate worker retry and idempotency behavior."

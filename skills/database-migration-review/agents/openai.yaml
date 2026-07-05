@@ -1,0 +1,4 @@
+interface:
+  display_name: "Database Migration Review"
+  short_description: "Review database migrations."
+  default_prompt: "Use this skill to review database migrations for safety."

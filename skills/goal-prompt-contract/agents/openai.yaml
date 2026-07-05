@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goal Prompt Contract"
+  short_description: "Write verifiable goal prompts."
+  default_prompt: "Use this skill to write a verifiable long-running agent goal."

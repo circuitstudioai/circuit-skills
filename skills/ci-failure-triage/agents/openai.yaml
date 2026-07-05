@@ -1,0 +1,4 @@
+interface:
+  display_name: "CI Failure Triage"
+  short_description: "Triage failed CI check runs."
+  default_prompt: "Use this skill to diagnose failed CI checks and propose the next fix."

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 - 2026-07-05
+
+- Expanded the repo from 5 to 15 skills to make it useful as a generic open-source skills library.
+- Added skill authoring, agent goal, CI triage, preview validation, frontend UX, database, RLS, data quality, worker idempotency, and PRD scoping skills.
+- Updated the catalog and README for the broader "agent app-shipping operating system" direction.
+
 ## 0.1.1 - 2026-07-05
 
 - Expanded the public skills with more detailed workflows, decision trees, evidence templates, and failure-mode guidance.
