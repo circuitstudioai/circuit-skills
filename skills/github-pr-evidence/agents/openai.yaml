@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub PR Evidence"
+  short_description: "Prepare reviewer evidence."
+  default_prompt: "Use this skill to prepare or update a pull request."

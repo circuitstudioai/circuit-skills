@@ -1,0 +1,4 @@
+interface:
+  display_name: "Circuit Release Gate"
+  short_description: "Verify apps before release."
+  default_prompt: "Use this skill to verify an app before merge or deployment."

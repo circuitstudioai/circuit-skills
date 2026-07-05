@@ -1,0 +1,4 @@
+interface:
+  display_name: "Circuit Handoff"
+  short_description: "Write state-focused handoffs."
+  default_prompt: "Use this skill to prepare a handoff for ongoing agent work."

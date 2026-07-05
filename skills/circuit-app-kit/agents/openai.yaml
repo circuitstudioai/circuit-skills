@@ -1,0 +1,4 @@
+interface:
+  display_name: "Circuit App Kit"
+  short_description: "Scaffold approved Circuit apps."
+  default_prompt: "Use this skill to create or extend an app safely."

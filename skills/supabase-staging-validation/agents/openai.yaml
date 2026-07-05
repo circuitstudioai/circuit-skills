@@ -1,0 +1,4 @@
+interface:
+  display_name: "Supabase Staging Validation"
+  short_description: "Validate Supabase staging."
+  default_prompt: "Use this skill to validate Supabase-backed apps."
