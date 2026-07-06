@@ -11,7 +11,7 @@ Inspired by:
 
 ## Version
 
-Current version: `0.2.0`
+Current version: `0.3.0`
 
 ## Included Skills
 
@@ -32,6 +32,12 @@ Current version: `0.2.0`
 | `data-quality-gate` | Gate releases on data quality evidence. |
 | `worker-idempotency-validation` | Validate worker retry and idempotency behavior. |
 | `prd-to-scope` | Convert PRDs or ideas into scoped release slices. |
+| `write-app-spec` | Write buildable app specs with independently verifiable slices. |
+| `implement-slice` | Implement one verified slice at a time. |
+| `close-spec` | Close shipped specs into durable rationale records. |
+| `skill-eval-harness` | Evaluate skills with examples, blind runs, and judge passes. |
+| `screenshot-critique` | Review screenshots for visible UI defects. |
+| `visual-regression-compare` | Compare screenshots and visual changes against intended outcomes. |
 
 ## Why Skills?
 
@@ -116,7 +122,13 @@ The validator checks that each skill has:
 
 ## Install
 
-Copy or symlink selected skill folders into your agent's skill directory.
+Use a skills-compatible installer when available:
+
+```bash
+npx skills add circuitstudioai/circuit-skills
+```
+
+Or copy/symlink selected skill folders into your agent's skill directory.
 
 Examples:
 

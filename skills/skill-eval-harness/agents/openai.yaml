@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Eval Harness"
+  short_description: "Evaluate skills with examples."
+  default_prompt: "Use this skill to evaluate an agent skill against examples."

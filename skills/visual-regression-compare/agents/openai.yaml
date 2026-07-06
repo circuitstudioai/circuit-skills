@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Regression Compare"
+  short_description: "Compare visual regressions."
+  default_prompt: "Use this skill to compare screenshots for visual regressions."

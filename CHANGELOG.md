@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 - 2026-07-06
+
+- Added installer/skills metadata via `.claude-plugin/plugin.json`.
+- Added a focused spec lifecycle: `write-app-spec`, `implement-slice`, and `close-spec`.
+- Added `skill-eval-harness` to evaluate skills with examples and blind runs.
+- Added visual review skills: `screenshot-critique` and `visual-regression-compare`.
+- Kept the flat skill layout for now to avoid breaking existing links.
+
 ## 0.2.0 - 2026-07-05
 
 - Expanded the repo from 5 to 15 skills to make it useful as a generic open-source skills library.

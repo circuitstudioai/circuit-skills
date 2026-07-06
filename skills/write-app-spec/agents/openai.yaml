@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write App Spec"
+  short_description: "Write buildable app specs."
+  default_prompt: "Use this skill to write a buildable app specification."

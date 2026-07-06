@@ -1,0 +1,4 @@
+interface:
+  display_name: "Close Spec"
+  short_description: "Close shipped build specs."
+  default_prompt: "Use this skill to close a shipped spec into a durable rationale record."

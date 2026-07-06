@@ -1,0 +1,27 @@
+{
+  "name": "circuit-skills",
+  "skills": [
+    "./skills/circuit-app-kit",
+    "./skills/circuit-release-gate",
+    "./skills/circuit-handoff",
+    "./skills/supabase-staging-validation",
+    "./skills/github-pr-evidence",
+    "./skills/skill-design-guide",
+    "./skills/goal-prompt-contract",
+    "./skills/ci-failure-triage",
+    "./skills/preview-deploy-validation",
+    "./skills/frontend-ux-gate",
+    "./skills/database-migration-review",
+    "./skills/rls-policy-review",
+    "./skills/data-quality-gate",
+    "./skills/worker-idempotency-validation",
+    "./skills/prd-to-scope",
+    "./skills/write-app-spec",
+    "./skills/implement-slice",
+    "./skills/close-spec",
+    "./skills/skill-eval-harness",
+    "./skills/screenshot-critique",
+    "./skills/visual-regression-compare"
+  ]
+}
+

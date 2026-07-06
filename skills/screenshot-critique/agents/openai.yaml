@@ -1,0 +1,4 @@
+interface:
+  display_name: "Screenshot Critique"
+  short_description: "Critique screenshots visually."
+  default_prompt: "Use this skill to review screenshots for visible UI defects."
