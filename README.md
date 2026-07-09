@@ -11,7 +11,7 @@ Inspired by:
 
 ## Version
 
-Current version: `0.3.0`
+Current version: `0.4.0`
 
 ## Included Skills
 
@@ -142,6 +142,39 @@ cp -R skills/circuit-handoff ~/.codex/skills/
 ```
 
 Treat this repo as inspiration, not a universal framework. The best skills are usually specific to the team, stack, and failure modes they are meant to protect.
+
+## Quickstart
+
+After installing, try one complete loop in an existing app repo:
+
+```text
+Use the write-app-spec skill from circuit-skills.
+
+I want to build a small team launch checklist app. Users can create a launch, add checklist items, mark owners, and see what is blocked before launch day.
+
+Write the first buildable spec and split it into independently verifiable slices.
+```
+
+Then ask the agent to build only the first slice:
+
+```text
+Use the implement-slice skill from circuit-skills.
+Read the generated spec and implement slice 001 only.
+Run the slice validation and update the slice status with evidence.
+```
+
+Before merge, ask for release evidence:
+
+```text
+Use the circuit-release-gate skill from circuit-skills.
+Run the checks available in this repo and return a release gate verdict with commands, evidence, blockers, and the next step.
+```
+
+See `examples/` for expected output shapes:
+
+- `examples/first-app-spec/` - a small buildable spec and first slice.
+- `examples/release-gate-report.md` - release evidence packet.
+- `examples/visual-review.md` - screenshot critique report.
 
 ## Example Share Prompt
 

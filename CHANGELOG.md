@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 - 2026-07-09
+
+- Added `examples/` with a day-one workflow and validation test prompt.
+- Added a sample first app spec with one independently verifiable slice.
+- Added example release gate and visual review reports.
+- Updated the README with a concrete quickstart loop from spec to slice to release evidence.
+
 ## 0.3.0 - 2026-07-06
 
 - Added installer/skills metadata via `.claude-plugin/plugin.json`.
