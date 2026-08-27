@@ -1,0 +1,78 @@
+:root {
+  --bg: #f3f1e8;
+  --panel: #fffdf7;
+  --ink: #171816;
+  --muted: #676a60;
+  --line: #ddd8c9;
+  --line-strong: #b9b29f;
+  --button: #24513f;
+  --button-hover: #1a3c2f;
+  --positive: #287354;
+  --negative: #a23a2a;
+  --negative-bg: #f9e5df;
+  --negative-line: #e5a99b;
+  --focus: #d29b2d;
+  --sans:
+    Avenir Next,
+    Avenir,
+    Trebuchet MS,
+    sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  font:
+    16px/1.45 Charter,
+    'Bitstream Charter',
+    'Sitka Text',
+    Cambria,
+    serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+button,
+input,
+select,
+.eyebrow,
+.summary-grid span,
+.income-control,
+.expense-panel label {
+  font-family: var(--sans);
+}
+
+h1 {
+  color: var(--ink);
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+h2 {
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 34px;
+  }
+}

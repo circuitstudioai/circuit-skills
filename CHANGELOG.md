@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0 - 2026-08-27
+
+- Added reference run 001: a reproducible React/Vite monthly budget app built with the core spec-to-release workflow.
+- Preserved the initial yellow Playwright gate and the final green rerun as honest evaluation evidence.
+- Added desktop and mobile screenshots, source, tests, specs, visual review, and a limitations-focused scorecard.
+- Documented how to reproduce and host the example from the monorepo subdirectory.
+
 ## 0.4.0 - 2026-07-09
 
 - Added `examples/` with a day-one workflow and validation test prompt.

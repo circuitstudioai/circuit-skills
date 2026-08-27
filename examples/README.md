@@ -50,6 +50,7 @@ Review these desktop and mobile screenshots for visible UI defects before I merg
 - `first-app-spec/slices/001-create-launch-checklist.md` shows one independently verifiable slice.
 - `release-gate-report.md` shows a concise release evidence packet.
 - `visual-review.md` shows how screenshot critique findings should be reported.
+- `budget-validation-app/` is reference run 001: a complete React/Vite build with its spec, source, tests, screenshots, initial yellow gate, final green gate, and evaluation scorecard.
 
 ## Validation Test Prompt
 

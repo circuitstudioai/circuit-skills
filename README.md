@@ -11,7 +11,7 @@ Inspired by:
 
 ## Version
 
-Current version: `0.4.0`
+Current version: `0.5.0`
 
 ## Included Skills
 
@@ -175,6 +175,7 @@ See `examples/` for expected output shapes:
 - `examples/first-app-spec/` - a small buildable spec and first slice.
 - `examples/release-gate-report.md` - release evidence packet.
 - `examples/visual-review.md` - screenshot critique report.
+- `examples/budget-validation-app/` - reference run 001, including a reproducible app, specs, release evidence, screenshots, and an evaluation scorecard.
 
 ## Example Share Prompt
 
