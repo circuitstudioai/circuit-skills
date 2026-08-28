@@ -51,6 +51,7 @@ Review these desktop and mobile screenshots for visible UI defects before I merg
 - `release-gate-report.md` shows a concise release evidence packet.
 - `visual-review.md` shows how screenshot critique findings should be reported.
 - `budget-validation-app/` is reference run 001: a complete React/Vite build with its spec, source, tests, screenshots, initial yellow gate, final green gate, and evaluation scorecard.
+- `family-budget-app/` is branch-only reference run 003: a household finance product with auth-ready Supabase tenancy, RLS contracts, shared budgets, goals, responsive UI, and an explicit database-runtime blocker.
 
 ## Validation Test Prompt
 
