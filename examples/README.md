@@ -51,6 +51,7 @@ Review these desktop and mobile screenshots for visible UI defects before I merg
 - `release-gate-report.md` shows a concise release evidence packet.
 - `visual-review.md` shows how screenshot critique findings should be reported.
 - `budget-validation-app/` is reference run 001: a complete React/Vite build with its spec, source, tests, screenshots, initial yellow gate, final green gate, and evaluation scorecard.
+- `advanced-budget-validation-app/` is the branch-only reference run 002: a more complex persistent CRUD app with filters, export, failure evidence, and five tests.
 
 ## Validation Test Prompt
 
