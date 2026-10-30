@@ -9,9 +9,15 @@ Inspired by:
 - Block's App Kit writeup: https://engineering.block.xyz/blog/from-localhost-to-launched-safely-shipping-apps-that-anyone-can-build
 - David Ondrej's public skills repo: https://github.com/davidondrej/skills
 
+Several skills adapt MIT-licensed workflows from Circuit Studio agent libraries (wording adjusted for this public catalog):
+
+- [agent-skills](https://github.com/circuitstudioai/agent-skills) — e.g. git workflow, code review severity, security hardening
+- [skills-1](https://github.com/circuitstudioai/skills-1) — future handoff/diagnosis adaptations (see changelog)
+- [plugins `pstack/`](https://github.com/circuitstudioai/plugins/tree/main/pstack) — e.g. blast-radius review patterns
+
 ## Version
 
-Current version: `0.6.0`
+Current version: `0.6.1`
 
 ## Included Skills
 
@@ -27,6 +33,7 @@ Current version: `0.6.0`
 | `goal-prompt-contract` | Write verifiable long-running agent goals. |
 | `ci-failure-triage` | Diagnose failed CI checks and identify the next fix. |
 | `code-review` | Pre-merge PR diff review without a paid bot. |
+| `blast-radius-review` | Cross-cutting impact check for schema and shared-code changes. |
 | `preview-deploy-validation` | Validate preview deployments before release. |
 | `frontend-ux-gate` | Check frontend UX readiness before release. |
 | `database-migration-review` | Review database migrations for safety. |

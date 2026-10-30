@@ -5,9 +5,9 @@ description: Review a PR or diff for correctness, regressions, tests, and scope 
 
 # Code Review
 
-Adapted for Circuit Skills from the intended `code-review` workflow in [circuit-agent-blueprint](https://github.com/circuitstudioai/circuit-agent-blueprint) (source repo not used verbatim; aligned with this repo’s skill style).
+Adapted from [agent-skills `code-review-and-quality`](https://github.com/circuitstudioai/agent-skills) (MIT). Aligned with Circuit Skills layout; not a verbatim copy.
 
-Use a **fresh review pass** separate from implementation. Do not edit code during review unless the user asked for fixes afterward.
+Use a **fresh review pass** separate from implementation. The **reviewer model must differ from the model that authored the change**. Do not edit code during review unless the user asked for fixes afterward.
 
 ## State Check
 
@@ -26,37 +26,48 @@ git diff origin/main...HEAD
 ## Review Order
 
 1. Confirm the change matches the stated objective and slice scope.
-2. Read behavior-critical paths first (auth, data writes, migrations, jobs).
-3. Walk every human-authored changed line with enough context for regressions.
-4. Check tests: changed behavior covered, assertions observe outcomes, tests would fail if broken.
+2. Read tests first — behavior covered, edge cases, regression strength.
+3. Read behavior-critical paths (auth, data writes, migrations, jobs).
+4. Walk human-authored changed lines with enough context for regressions.
 5. Flag complexity, missing docs, or scope creep.
 
 ## Core Checks
 
-- Behavior regression on existing flows.
-- Error-path safety (no silent failures or unsafe defaults).
-- Boundary inputs (empty, null, overflow, permission denied).
-- Test gaps on changed behavior.
-- Docs or env var names updated when behavior changed.
+Correctness, readability, architecture fit, security touchpoints, and obvious performance traps (N+1, unbounded fetch).
+
+## Severity Labels
+
+Label every finding so authors know what is mandatory:
+
+| Label | Meaning | Author action |
+| --- | --- | --- |
+| **Critical:** | Blocks merge | Security, data loss, broken behavior — must fix |
+| *(no prefix)* | Required | Must address before merge |
+| **Optional:** / **Consider:** | Suggestion | Worth considering; not required |
+| **Nit:** | Style/minor | May ignore |
+| **FYI** | Informational | No action required |
+
+Lead with Critical and required items before nits.
 
 ## Finding Format
 
 ```markdown
-### [<severity>] <title>
+### <label> <title>
 - File: `<path>:<line>`
 - Impact: <what breaks or degrades>
 - Evidence: <why this is a problem>
 - Fix: <concrete suggestion>
 ```
 
-Severity: `critical` | `high` | `medium` | `low`.
+Use **Critical:** prefix for blockers; omit prefix for other required items.
 
 ## Verdict
 
 ```markdown
 ## Code Review
+Reviewer model: <name> (must differ from author)
 Verdict: <approve | approve with notes | request changes>
-Findings: <count by severity>
+Findings: <count by label>
 Must fix before merge: <list or None>
 Notes: <optional rebuttal guidance>
 ```
@@ -64,6 +75,6 @@ Notes: <optional rebuttal guidance>
 ## Rules
 
 - Prioritize correctness and regressions over style nits.
-- Stay within the PR scope unless a critical defect is clearly introduced elsewhere.
-- Post findings to the PR (or return them for a PR comment) when asked to complete the Circuit Dev loop.
-- Fix or rebut every finding before merge request; rebuttals need evidence.
+- Stay within the PR scope unless a Critical defect is clearly introduced elsewhere.
+- Post findings to the PR when completing the Circuit Dev loop.
+- Fix or rebut every Critical and required finding before merge request; rebuttals need evidence.

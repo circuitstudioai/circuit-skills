@@ -11,6 +11,7 @@
     "./skills/goal-prompt-contract",
     "./skills/ci-failure-triage",
     "./skills/code-review",
+    "./skills/blast-radius-review",
     "./skills/preview-deploy-validation",
     "./skills/frontend-ux-gate",
     "./skills/database-migration-review",

@@ -30,12 +30,19 @@ When escalating, note **why** in the PR body.
 
 ## 3. Branch Discipline
 
-- One feature per branch or worktree.
-- Name: `feat/<slug>-<YYYY-MM-DD>`.
-- Never commit to `main`.
+Adapted from [agent-skills `git-workflow-and-versioning`](https://github.com/circuitstudioai/agent-skills) (MIT).
+
+- **One feature per branch or git worktree** — parallel streams stay isolated until merge.
+- Name: `feat/<slug>-<YYYY-MM-DD>` (or team `fix/` / `chore/` prefixes when appropriate).
+- Branch from `main`; keep branches short-lived; delete after merge.
+- **Never commit to `main`.**
+- Prefer atomic commits per verified slice; do not accumulate a giant uncommitted diff.
 
 ```bash
+git checkout main && git pull
 git checkout -b feat/<slug>-<date>
+# optional parallel agent:
+git worktree add ../<repo>-<slug> feat/<slug>-<date>
 git status --short
 ```
 
@@ -61,32 +68,43 @@ Use `github-pr-evidence` shape. The PR body must include:
 - Test output summary.
 - Link to the CI run.
 - `preview-deploy-validation` result.
-- Desktop and mobile screenshots of changed UI (use `screenshot-critique` when reviewing visuals).
+
+### UI changes
+
+- Screenshots at **1440px** and **390px** viewport widths (desktop and mobile).
+- Run an **axe-core** accessibility pass on changed routes; paste summary (violations fixed or deferred with reason).
+- Use `screenshot-critique` on the captures when judging visuals.
+
+### Bug fixes
+
+- Write a **failing test first** that reproduces the bug, then implement the fix and show the test green.
 
 ## 7. Automated Review (No Paid Bot)
 
 1. Wait for CI green; use `ci-failure-triage` on failures.
-2. Run `code-review` on the PR diff.
-3. Run `security-and-hardening` when auth, RLS, secrets, or external integrations changed.
-4. Fix or rebut every finding.
-5. Post a PR comment update with changed items, evidence, and remaining blockers.
+2. Run `code-review` on the PR diff with a **reviewer model different from the author model**.
+3. Run `security-and-hardening` whenever **auth, RLS, secrets, or external integrations** change.
+4. Run `blast-radius-review` when **schema, migrations, shared libraries, or cross-package contracts** change.
+5. Fix or rebut every **Critical** and required finding.
+6. Post a PR comment update with changed items, evidence, and remaining blockers.
 
-Do not request merge while unresolved critical/high review items remain.
+Do not request merge while unresolved Critical or required review items remain.
 
-## 8. Merge Request (Human Gate)
+## 8. Merge Request (Owner Gate)
 
 - Mark the PR ready for review.
-- Send Abhishek the PR link, verdict, risks, and rollback steps.
-- **Never merge or deploy production without his explicit go-ahead.**
-- Log his approval in a PR comment (quote decision + timestamp).
+- Send the owner the PR link, verdict, risks, and rollback steps.
+- **Never merge or deploy production without explicit owner approval.**
+- **Before merge:** re-run release gate (and applicable checks) on the **latest commit**; CI must be green on that SHA.
+- Log **owner approval** in a PR comment (decision + timestamp).
 
 ## 9. Close
 
-After merge and his deploy:
+After merge and owner deploy:
 
 - Run `close-spec` for the shipped slice.
 - Run `circuit-handoff` if work continues elsewhere.
-- Run a production smoke check after he confirms deploy.
+- Run a production smoke check after deploy is confirmed.
 
 ## Referenced Skills
 
@@ -106,11 +124,12 @@ Compose these by name from this repo:
 | `ci-failure-triage` | Review |
 | `code-review` | Review |
 | `security-and-hardening` | Review |
+| `blast-radius-review` | Review (schema/shared code) |
 | `close-spec` | Close |
 | `circuit-handoff` | Close |
 
 ## Integrity Rules
 
 - Do not weaken gates, tests, or RLS to look done.
-- Do not merge or deploy without logged approval.
+- Do not merge or deploy without logged owner approval.
 - Record blockers as evidence, not silence.

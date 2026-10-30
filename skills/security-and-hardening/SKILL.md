@@ -5,9 +5,9 @@ description: Review changes for auth, secrets, RLS, injection, and unsafe defaul
 
 # Security And Hardening
 
-Adapted for Circuit Skills from the intended `security-and-hardening` workflow in [circuit-agent-blueprint](https://github.com/circuitstudioai/circuit-agent-blueprint) (source repo not used verbatim; aligned with this repo’s skill style).
+Adapted from [agent-skills `security-and-hardening`](https://github.com/circuitstudioai/agent-skills) (MIT). Aligned with Circuit Skills layout; not a verbatim copy.
 
-Pair with `rls-policy-review` and `database-migration-review` when database policies change.
+Run whenever auth, RLS, secrets, or external integrations change (see `circuit-dev-loop`). Pair with `rls-policy-review` and `database-migration-review` when database policies change.
 
 ## State Check
 
@@ -47,12 +47,14 @@ Read `AGENTS.md` or repo security notes when present.
 
 ### Dependencies and supply chain
 
-- New dependencies justified; known risky patterns flagged (dynamic `require`, postinstall scripts) when introduced.
+- New dependencies justified; run the package manager audit on the lockfile when dependencies change.
 
 ## Finding Format
 
+Use the same severity labels as `code-review` (**Critical:** blocks merge).
+
 ```markdown
-### [security-<severity>] <title>
+### <label> <title>
 - File: `<path>:<line>`
 - Risk: <confidentiality | integrity | availability | authz>
 - Evidence: <what is unsafe>
@@ -72,4 +74,4 @@ Follow-up: <RLS staging validation, rotation, etc., or None>
 
 - Do not downgrade RLS or remove checks to unblock merge.
 - Name missing env vars only, never values.
-- Block merge on unmitigated critical/high authz or secret-exposure findings.
+- Block merge on unmitigated Critical authz or secret-exposure findings.
