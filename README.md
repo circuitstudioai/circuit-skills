@@ -11,12 +11,13 @@ Inspired by:
 
 ## Version
 
-Current version: `0.5.0`
+Current version: `0.6.0`
 
 ## Included Skills
 
 | Skill | Purpose |
 | --- | --- |
+| `circuit-dev-loop` | Standard Circuit Dev loop from intake through PR, review, merge request, and close. |
 | `circuit-app-kit` | Create or extend app projects through an approved app-kit path. |
 | `circuit-release-gate` | Run build, lint, test, security, data-quality, and evidence checks before release. |
 | `circuit-handoff` | Produce state-focused handoffs for long-running or interrupted agent work. |
@@ -25,10 +26,12 @@ Current version: `0.5.0`
 | `skill-design-guide` | Design useful, portable agent skills. |
 | `goal-prompt-contract` | Write verifiable long-running agent goals. |
 | `ci-failure-triage` | Diagnose failed CI checks and identify the next fix. |
+| `code-review` | Pre-merge PR diff review without a paid bot. |
 | `preview-deploy-validation` | Validate preview deployments before release. |
 | `frontend-ux-gate` | Check frontend UX readiness before release. |
 | `database-migration-review` | Review database migrations for safety. |
 | `rls-policy-review` | Review row-level security policies. |
+| `security-and-hardening` | Auth, secrets, RLS, and unsafe-default review before merge. |
 | `data-quality-gate` | Gate releases on data quality evidence. |
 | `worker-idempotency-validation` | Validate worker retry and idempotency behavior. |
 | `prd-to-scope` | Convert PRDs or ideas into scoped release slices. |

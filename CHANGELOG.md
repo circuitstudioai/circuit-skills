@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0 - 2026-10-30
+
+- Added `circuit-dev-loop` as the standard Circuit Dev and cloud-agent shipping checklist for circuitstudioai repos.
+- Added `code-review` and `security-and-hardening`, adapted from the intended workflows in `circuit-agent-blueprint`, for automated pre-merge review without a paid bot.
+
 ## 0.5.0 - 2026-08-27
 
 - Added reference run 001: a reproducible React/Vite monthly budget app built with the core spec-to-release workflow.

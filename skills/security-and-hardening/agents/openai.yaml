@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security And Hardening"
+  short_description: "Auth, secrets, and RLS review."
+  default_prompt: "Use this skill to review this change for security, auth, secrets, and RLS issues before merge."
