@@ -1,3 +1,7 @@
+# 0.6.2 — 2026-11-01
+
+Vendor pinned Hallmark 2.0.0 and Cloudflare security-audit, including licenses, references and validators. Preserve upstream security sandbox and independent-verifier requirements.
+
 # Changelog
 
 ## 0.6.1 - 2026-10-30

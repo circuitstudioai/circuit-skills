@@ -17,7 +17,7 @@ Several skills adapt MIT-licensed workflows from Circuit Studio agent libraries 
 
 ## Version
 
-Current version: `0.6.1`
+Current version: `0.6.2`
 
 ## Included Skills
 
@@ -192,3 +192,10 @@ See `examples/` for expected output shapes:
 ```text
 Use the release-gate skill from this repo to verify whether my app is ready to merge. Read the repo instructions first, run the available build/test/lint/security checks, and return a verdict with evidence and blockers.
 ```
+
+## Pinned design and security workflows
+
+- `hallmark` (Nutlope, MIT): audit existing websites and design or polish only within the requested scope. Includes the browser linter, themes and references.
+- `security-audit` (Cloudflare, MIT): source-first security guidance; the six-phase audit runs only when explicitly requested. Independent verification and an OS-enforced no-network sandbox are required for target execution. Installation alone is not a completed audit.
+
+Each skill includes SOURCE.md with its exact upstream commit. No upstream installation hooks are enabled.
