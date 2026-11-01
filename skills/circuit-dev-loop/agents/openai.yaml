@@ -1,0 +1,4 @@
+interface:
+  display_name: "Circuit Dev Loop"
+  short_description: "Standard Circuit Dev shipping loop."
+  default_prompt: "Use this skill to run the standard Circuit Dev development loop from intake through PR, review, and close."

@@ -71,6 +71,18 @@ Check:
 - Do not claim preview deploy success unless the check actually passed.
 - Do not request merge when release gate verdict is red or blocked.
 
+## UI Evidence
+
+When the PR changes UI:
+
+- Attach screenshots at **1440px** and **390px** viewport widths.
+- Run **axe-core** (or repo equivalent) on affected routes; summarize violations and fixes.
+- Reference `screenshot-critique` when reviewing captures.
+
+## Bug Fix Evidence
+
+- Show a **failing test** (or repro) before the fix and the same test **passing** after.
+
 ## Comment / Review Update Template
 
 ```markdown

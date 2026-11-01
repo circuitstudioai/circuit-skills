@@ -1,4 +1,20 @@
+# 0.6.2 — 2026-11-01
+
+Vendor pinned Hallmark 2.0.0 and Cloudflare security-audit, including licenses, references and validators. Preserve upstream security sandbox and independent-verifier requirements.
+
 # Changelog
+
+## 0.6.1 - 2026-10-30
+
+- Expanded `circuit-dev-loop` with git worktree discipline (adapted from [agent-skills](https://github.com/circuitstudioai/agent-skills)), UI evidence (1440px/390px screenshots, axe-core), failing-test-first bug fixes, distinct reviewer model, merge gate on latest commit with owner approval, and generic owner wording for the public repo.
+- Updated `code-review` and `security-and-hardening` with MIT attribution to agent-skills and shared severity labels.
+- Added `blast-radius-review` adapted from [plugins `pstack/blast-radius`](https://github.com/circuitstudioai/plugins/tree/main/pstack).
+- Extended `github-pr-evidence` with UI and bug-fix evidence requirements.
+
+## 0.6.0 - 2026-10-30
+
+- Added `circuit-dev-loop` as the standard Circuit Dev and cloud-agent shipping checklist for circuitstudioai repos.
+- Added `code-review` and `security-and-hardening`, adapted from the intended workflows in `circuit-agent-blueprint`, for automated pre-merge review without a paid bot.
 
 ## 0.5.0 - 2026-08-27
 

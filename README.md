@@ -9,14 +9,21 @@ Inspired by:
 - Block's App Kit writeup: https://engineering.block.xyz/blog/from-localhost-to-launched-safely-shipping-apps-that-anyone-can-build
 - David Ondrej's public skills repo: https://github.com/davidondrej/skills
 
+Several skills adapt MIT-licensed workflows from Circuit Studio agent libraries (wording adjusted for this public catalog):
+
+- [agent-skills](https://github.com/circuitstudioai/agent-skills) — e.g. git workflow, code review severity, security hardening
+- [skills-1](https://github.com/circuitstudioai/skills-1) — future handoff/diagnosis adaptations (see changelog)
+- [plugins `pstack/`](https://github.com/circuitstudioai/plugins/tree/main/pstack) — e.g. blast-radius review patterns
+
 ## Version
 
-Current version: `0.5.0`
+Current version: `0.6.2`
 
 ## Included Skills
 
 | Skill | Purpose |
 | --- | --- |
+| `circuit-dev-loop` | Standard Circuit Dev loop from intake through PR, review, merge request, and close. |
 | `circuit-app-kit` | Create or extend app projects through an approved app-kit path. |
 | `circuit-release-gate` | Run build, lint, test, security, data-quality, and evidence checks before release. |
 | `circuit-handoff` | Produce state-focused handoffs for long-running or interrupted agent work. |
@@ -25,10 +32,13 @@ Current version: `0.5.0`
 | `skill-design-guide` | Design useful, portable agent skills. |
 | `goal-prompt-contract` | Write verifiable long-running agent goals. |
 | `ci-failure-triage` | Diagnose failed CI checks and identify the next fix. |
+| `code-review` | Pre-merge PR diff review without a paid bot. |
+| `blast-radius-review` | Cross-cutting impact check for schema and shared-code changes. |
 | `preview-deploy-validation` | Validate preview deployments before release. |
 | `frontend-ux-gate` | Check frontend UX readiness before release. |
 | `database-migration-review` | Review database migrations for safety. |
 | `rls-policy-review` | Review row-level security policies. |
+| `security-and-hardening` | Auth, secrets, RLS, and unsafe-default review before merge. |
 | `data-quality-gate` | Gate releases on data quality evidence. |
 | `worker-idempotency-validation` | Validate worker retry and idempotency behavior. |
 | `prd-to-scope` | Convert PRDs or ideas into scoped release slices. |
@@ -182,3 +192,10 @@ See `examples/` for expected output shapes:
 ```text
 Use the release-gate skill from this repo to verify whether my app is ready to merge. Read the repo instructions first, run the available build/test/lint/security checks, and return a verdict with evidence and blockers.
 ```
+
+## Pinned design and security workflows
+
+- `hallmark` (Nutlope, MIT): audit existing websites and design or polish only within the requested scope. Includes the browser linter, themes and references.
+- `security-audit` (Cloudflare, MIT): source-first security guidance; the six-phase audit runs only when explicitly requested. Independent verification and an OS-enforced no-network sandbox are required for target execution. Installation alone is not a completed audit.
+
+Each skill includes SOURCE.md with its exact upstream commit. No upstream installation hooks are enabled.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blast Radius Review"
+  short_description: "Cross-cutting change impact check."
+  default_prompt: "Use this skill to review blast radius for schema, migration, or shared-code changes before merge."
