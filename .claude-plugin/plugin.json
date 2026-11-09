@@ -1,6 +1,7 @@
 {
   "name": "circuit-skills",
   "skills": [
+    "./skills/circuit-dev-loop",
     "./skills/circuit-app-kit",
     "./skills/circuit-release-gate",
     "./skills/circuit-handoff",
@@ -9,10 +10,13 @@
     "./skills/skill-design-guide",
     "./skills/goal-prompt-contract",
     "./skills/ci-failure-triage",
+    "./skills/code-review",
+    "./skills/blast-radius-review",
     "./skills/preview-deploy-validation",
     "./skills/frontend-ux-gate",
     "./skills/database-migration-review",
     "./skills/rls-policy-review",
+    "./skills/security-and-hardening",
     "./skills/data-quality-gate",
     "./skills/worker-idempotency-validation",
     "./skills/prd-to-scope",
